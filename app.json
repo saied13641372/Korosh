@@ -1,0 +1,106 @@
+{
+  "expo": {
+    "name": "اسپیکر هوشمند نوا",
+    "slug": "noba",
+    "version": "1.7.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "microphonePermission": false,
+          "photosPermission": "برای انتخاب تصویر پس‌زمینه، لوگو و تصاویر آوای نوا اجازه Gallery لازم است.",
+          "cameraPermission": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "برای گفت‌وگوی صوتی با زهره، دسترسی به میکروفون لازم است.",
+          "recordAudioAndroid": true,
+          "enableBackgroundRecording": false,
+          "enableBackgroundPlayback": true
+        }
+      ],
+      "expo-document-picker",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "برای گفت‌وگوی صوتی با زهره، دسترسی به میکروفون لازم است.",
+          "speechRecognitionPermission": "برای تبدیل گفتار به متن، دسترسی تشخیص گفتار لازم است."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "برای نمایش دوربین اضطراری، دسترسی به دوربین لازم است.",
+          "microphonePermission": "برای ضبط ویدیوی اضطراری، دسترسی به میکروفون لازم است.",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-local-authentication",
+      [
+        "expo-media-library",
+        {
+          "granularPermissions": [
+            "audio"
+          ]
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.noba.speaker",
+      "versionCode": 19,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#07152e"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.CAMERA",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_AUDIO"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.noba.speaker",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ],
+        "NSSpeechRecognitionUsageDescription": "برای تبدیل گفتار به متن، دسترسی تشخیص گفتار لازم است.",
+        "NSMicrophoneUsageDescription": "برای گفت‌وگوی صوتی با زهره، دسترسی به میکروفون لازم است."
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "اسپیکر هوشمند نوا",
+      "shortName": "نوا",
+      "lang": "fa",
+      "dir": "rtl",
+      "display": "standalone",
+      "startUrl": ".",
+      "themeColor": "#07152e",
+      "backgroundColor": "#07152e",
+      "favicon": "./assets/icon.png",
+      "output": "single"
+    },
+    "icon": "./assets/icon.png",
+    "extra": {
+      "eas": {
+        "projectId": "133d9a0d-1396-4dcd-acf2-215175c482cd"
+      }
+    },
+    "experiments": {
+      "baseUrl": "/Korosh"
+    }
+  }
+}

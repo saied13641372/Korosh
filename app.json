@@ -1,0 +1,95 @@
+{
+  "expo": {
+    "name": "کوروش نوا",
+    "slug": "korosh-nova",
+    "version": "3.3.40",
+    "orientation": "default",
+    "scheme": "koroshnova",
+    "android": {
+      "package": "com.korosh.nova.app",
+      "versionCode": 45,
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.WAKE_LOCK",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.CALL_PHONE",
+        "android.permission.READ_CONTACTS",
+        "android.permission.CAMERA",
+        "android.permission.SEND_SMS"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app_icon_foreground.png",
+        "backgroundColor": "#050713"
+      },
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "plugins": [
+      "expo-image-picker",
+      [
+        "expo-camera",
+        {
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-contacts",
+      "expo-secure-store",
+      "expo-local-authentication",
+      "expo-document-picker",
+      "expo-screen-orientation",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "./plugins/with-speech-recognition-queries",
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": true,
+          "enableBackgroundRecording": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "./plugins/with-korosh-audio-service"
+    ],
+    "icon": "./assets/app_icon.png",
+    "extra": {
+      "eas": {
+        "projectId": "b80dab8a-34d3-405e-97da-9c434b6d55ff"
+      }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#070b1c",
+      "translucent": false
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b80dab8a-34d3-405e-97da-9c434b6d55ff",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0,
+      "useEmbeddedUpdate": true
+    }
+  }
+}

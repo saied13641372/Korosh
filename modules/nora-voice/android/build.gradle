@@ -1,0 +1,6 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android { namespace 'expo.modules.noravoice'; compileSdkVersion rootProject.ext.compileSdkVersion; defaultConfig { minSdkVersion rootProject.ext.minSdkVersion } }
+
+dependencies { implementation project(':expo-modules-core') }

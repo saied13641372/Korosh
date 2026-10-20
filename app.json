@@ -68,7 +68,8 @@
           "recordAudioAndroid": false
         }
       ],
-      "./plugins/with-korosh-audio-service"
+      "./plugins/with-korosh-audio-service",
+      "expo-asset"
     ],
     "icon": "./assets/app_icon.png",
     "extra": {
